@@ -1,13 +1,8 @@
-/**
- * @param { import("knex").Knex } knex
- * @returns { Promise<void> } 
- */
-exports.seed = async function(knex) {
+export async function seed(knex) {
   // Deletes ALL existing entries
-  await knex('table_name').del()
-  await knex('table_name').insert([
-    {id: 1, colName: 'rowValue1'},
-    {id: 2, colName: 'rowValue2'},
-    {id: 3, colName: 'rowValue3'}
+  await knex('skills').del();
+  await knex('skills').insert([
+    { id: 1, skill: 'JavaScript', user_id: 1 },
+    { id: 2, skill: 'Project Management', user_id: 2 }
   ]);
 };

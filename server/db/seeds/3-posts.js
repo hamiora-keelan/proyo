@@ -1,13 +1,8 @@
-/**
- * @param { import("knex").Knex } knex
- * @returns { Promise<void> } 
- */
-exports.seed = async function(knex) {
+export async function seed(knex) {
   // Deletes ALL existing entries
-  await knex('table_name').del()
-  await knex('table_name').insert([
-    {id: 1, colName: 'rowValue1'},
-    {id: 2, colName: 'rowValue2'},
-    {id: 3, colName: 'rowValue3'}
+  await knex('posts').del();
+  await knex('posts').insert([
+    { id: 1, sub_title_id: 1, body: 'This is the first post.', user_id: 1, status: 'published' },
+    { id: 2, sub_title_id: 2, body: 'This is the second post.', user_id: 2, status: 'draft' }
   ]);
 };
