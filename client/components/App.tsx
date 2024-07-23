@@ -1,18 +1,13 @@
-import { useFruits } from '../hooks/useFruits.ts'
+const Home = () => {
+  return <div className="p-4"><h1 className="text-2xl">Home</h1></div>;
+};
 
-function App() {
-  const { data } = useFruits()
-
+const App = () => {
   return (
-    <>
-      <div className="app">
-        <h1 className="text-3xl font-bold underline">
-          Fullstack Boilerplate - with Fruits!
-        </h1>
-        <ul>{data && data.map((fruit) => <li key={fruit}>{fruit}</li>)}</ul>
-      </div>
-    </>
-  )
-}
+    <div>
+      <Home />
+    </div>
+  );
+};
 
-export default App
+export default App;

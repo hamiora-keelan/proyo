@@ -1,4 +1,4 @@
-import { neutral, brand, danger, warning, success, background } from "./colors";
+import { neutral, brand, danger, warning, success, background } from "./color";
 import { typography } from "./typography";
 import { boxShadow } from "./shadow";
 

@@ -1,15 +1,15 @@
-import { Outlet } from 'react-router-dom'
+import { Outlet } from 'react-router-dom';
+import NavBar from './Nav';
 
-export default function Layout() {
+const Layout = () => {
   return (
-    <>
-      <header>
-        <h1>Fullstack Boilerplate - with Fruits!</h1>
-      </header>
-      <main>
+    <div>
+      <NavBar />
+      <div className="p-4">
         <Outlet />
-      </main>
-      <footer></footer>
-    </>
-  )
-}
+      </div>
+    </div>
+  );
+};
+
+export default Layout;
